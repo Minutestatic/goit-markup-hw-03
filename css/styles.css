@@ -31,6 +31,12 @@ html {
 *::after {
   box-sizing: inherit;
 }
+body {
+  margin: 0;
+  border-color: var(--main-page-color);
+  color: var(--primary-text-color);
+  font-family: Roboto, sans-serif;
+}
 
 .list {
   padding: 0;
@@ -55,12 +61,14 @@ html {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
-body {
-  margin: 0;
-  border-color: var(--main-page-color);
-  color: var(--primary-text-color);
-  font-family: Roboto, sans-serif;
+.section-title {
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .container {
@@ -70,6 +78,7 @@ body {
   padding-right: 15px;
   margin: 0 auto;
 }
+
 /* Header Flexbox */
 .header-container {
   display: flex;
@@ -181,20 +190,18 @@ body {
   margin-bottom: 30;
 }
 
-/* Section */
-.team {
-  background-color: var(--secondary-page-color);
+/* Features Flexbox */
+.features {
+  display: flex;
+  justify-content: space-between;
+  width: 1170px;
 }
-.section-title {
-  color: var(--title-text-color);
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-top: 0;
-  margin-bottom: 50px;
+
+.features .item + .item {
+  margin-left: 30px;
 }
 /* Features */
+
 .features-title {
   color: var(--title-text-color);
   font-size: 14px;
@@ -207,13 +214,25 @@ body {
 }
 .features-paragraph {
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 
   margin-top: 0;
   margin-bottom: 0;
 }
+/* work-list Flexbox */
+.work-list {
+  display: flex;
+  justify-content: space-between;
+}
+.work-list .iteam + .iteam {
+  margin-left: 30px;
+}
+
 /* Team */
+.team {
+  background-color: var(--secondary-page-color);
+}
 .team-item {
   background-color: var(--main-page-color);
 }
