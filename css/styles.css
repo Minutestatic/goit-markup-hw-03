@@ -43,6 +43,9 @@ body {
   margin: 0;
   list-style: none;
 }
+.line {
+  border-bottom: 1px solid #ececec;
+}
 
 .visually-hidden {
   position: absolute;
@@ -72,7 +75,7 @@ body {
 }
 
 .container {
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -241,6 +244,9 @@ body {
 }
 .team-item {
   background-color: var(--main-page-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-img {
@@ -299,6 +305,10 @@ body {
   margin-bottom: 12px;
 }
 
+.adds-list .link-map:hover,
+.adds-list .link-map:focus {
+  background-color: var(--acent-text-color);
+}
 .adds-list .link {
   color: var(--link-footer-color);
   font-style: normal;
@@ -310,6 +320,13 @@ body {
   display: block;
   margin-bottom: 12px;
 }
+.adds-list .link:hover,
+.adds-list .link:focus {
+  background-color: var(--acent-text-color);
+}
+.adds {
+  display: flex;
+}
 
 /* Button! */
 
@@ -318,6 +335,7 @@ body {
   background: var(--withe-text-color);
   font-family: Roboto, sans-serif;
   cursor: pointer;
+  border: 0;
 }
 
 .button.primary {
@@ -330,7 +348,7 @@ body {
   box-shadow: var(--box-shadow-button);
 
   letter-spacing: 0.06em;
-  border: 0;
+
   min-width: 200px;
   padding: 10px 24px;
   text-align: center;
@@ -351,6 +369,10 @@ body {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
+
+  padding: 6px 22px;
+  text-align: center;
+  border-radius: 4px;
 }
 
 .button.content:hover,
@@ -364,16 +386,52 @@ body {
 .project-list-link {
   text-decoration: none;
 }
+.project-img {
+  display: flex;
+  margin-bottom: 20px;
+}
 
 .project-list-title {
   color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 0;
+  margin-bottom: 4px;
 }
 .project-list-paragraph {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.85;
   letter-spacing: 0.03em;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+/* Project Flexbox */
+
+.filter-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 569px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.filter-container {
+  margin-bottom: 34px;
+}
+
+.project-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.project-item {
+  width: 370px;
+  flex-basis: calc((100% - 60px) / 9);
+  border: 1px solid #eeeeee;
 }
